@@ -24,6 +24,7 @@
 
 .submit-tags {
   background-color: cornflowerblue;
+  margin-right: 1px;
   color: white;
   border: none;
   padding: 0.5em 1em;
