@@ -32,6 +32,8 @@
   cursor: pointer;
   font-size: 1em;
   white-space: nowrap;
+  max-width: 100%; /* 限制最大宽度 */
+  box-sizing: border-box; /* 确保包括内边距和边框 */
   font-family: 'Permanent Marker', cursive;
   font-weight: 400;
   font-style: normal;

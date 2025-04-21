@@ -5,7 +5,6 @@
       <hr />
     </div>
     <img v-for="(img, i) in images" :key="i" :src="img" @click="preview = img" class="exhibition" />
-    />
   </div>
 </template>
 <script setup>
