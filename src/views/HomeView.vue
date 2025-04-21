@@ -17,12 +17,14 @@
 </template>
 
 <script setup>
-import Navigation from '@/components/Navigation.vue'
-import Carousel from '@/components/Carousel.vue'
-import Upload from '@/components/Upload.vue'
-import Uptags from '@/components/Uptags.vue'
-import Tabs from '@/components/Tabs.vue'
-import Exhibition from '@/components/Exhibition.vue'
+import { defineAsyncComponent } from 'vue'
+
+const Navigation = defineAsyncComponent(() => import('@/components/Navigation.vue'))
+const Carousel = defineAsyncComponent(() => import('@/components/Carousel.vue'))
+const Upload = defineAsyncComponent(() => import('@/components/Upload.vue'))
+const Uptags = defineAsyncComponent(() => import('@/components/Uptags.vue'))
+const Tabs = defineAsyncComponent(() => import('@/components/Tabs.vue'))
+const Exhibition = defineAsyncComponent(() => import('@/components/Exhibition.vue'))
 </script>
 
 <style scoped>
