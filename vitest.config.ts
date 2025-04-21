@@ -7,7 +7,7 @@ export default mergeConfig(
   defineConfig({
     base:"/rice/",
     build: {
-      outDir: "docs",
+      outDir: "rice",
     },
     test: {
       environment: 'jsdom',

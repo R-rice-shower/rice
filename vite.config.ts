@@ -8,11 +8,16 @@ import vueDevTools from 'vite-plugin-vue-devtools'
 export default defineConfig({
   plugins: [
     vue(),
+    
     vueDevTools(),
   ],
   resolve: {
     alias: {
       '@': fileURLToPath(new URL('./src', import.meta.url))
     },
+    
   },
+  base: '/rice/',           // ✅ 添加这行：设置 GitHub Pages 路径前缀（仓库名）
+  build: {
+    outDir: 'docs'}
 })
