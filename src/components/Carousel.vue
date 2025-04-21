@@ -1,11 +1,6 @@
 <template>
   <div>
-    <Swiper
-      :modules="[Autoplay]"
-      :autoplay="{ delay: 2000 }"
-      :loop="true"
-      class="swiper-container"
-    >
+    <Swiper :modules="[Autoplay]" :autoplay="{ delay: 2000 }" :loop="true" class="swiper-container">
       <SwiperSlide v-for="(image, index) in images" :key="index">
         <img :src="image" class="img" />
       </SwiperSlide>

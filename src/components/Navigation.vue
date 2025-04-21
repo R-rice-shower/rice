@@ -62,4 +62,3 @@ const setActiveTab = (tab) => {
   width: auto;
 }
 </style>
-

@@ -4,18 +4,8 @@
     <el-divider></el-divider>
 
     <div class="image-grid">
-      <div
-        class="image-wrapper"
-        v-for="(img, i) in images"
-        :key="i"
-        @click="handlePreview(img)"
-      >
-        <el-image
-          :src="img"
-          fit="cover"
-          lazy
-          class="image"
-        />
+      <div class="image-wrapper" v-for="(img, i) in images" :key="i" @click="handlePreview(img)">
+        <el-image :src="img" fit="cover" lazy class="image" />
       </div>
     </div>
 
@@ -81,6 +71,5 @@ const handlePreview = (img) => {
   object-fit: cover;
 }
 </style>
-
 
 <!--swapy组件之后再玩，已经安装-->

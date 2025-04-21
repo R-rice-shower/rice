@@ -58,4 +58,3 @@ const handleUpload = (e) => {
   border-color: #888;
 }
 </style>
-

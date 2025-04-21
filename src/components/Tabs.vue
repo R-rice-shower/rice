@@ -1,11 +1,7 @@
 <template>
   <div class="navigation-wrapper">
     <div class="tag-list">
-      <div
-        class="tag-item"
-        v-for="(item, index) in tags"
-        :key="index"
-      >
+      <div class="tag-item" v-for="(item, index) in tags" :key="index">
         <el-tag size="large" type="info" effect="light">
           {{ item }}
         </el-tag>
@@ -19,8 +15,22 @@ import { ref } from 'vue'
 import { ElTag } from 'element-plus'
 
 const tags = ref([
-  '蔚蓝档案', '明日方舟', '鸣潮', '碧蓝航线', 'hina',
-  6, 7, 8, 9, 10, 1, 23, 4, 5, 46, 7,
+  '蔚蓝档案',
+  '明日方舟',
+  '鸣潮',
+  '碧蓝航线',
+  'hina',
+  6,
+  7,
+  8,
+  9,
+  10,
+  1,
+  23,
+  4,
+  5,
+  46,
+  7,
 ])
 </script>
 
