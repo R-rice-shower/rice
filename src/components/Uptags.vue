@@ -20,6 +20,7 @@
   font-size: 1em;
   border: 2px solid #ccc;
   border-radius: 8px;
+  min-width: 0;
 }
 
 .submit-tags {
@@ -37,5 +38,7 @@
   font-family: 'Permanent Marker', cursive;
   font-weight: 400;
   font-style: normal;
+  flex-shrink: 1;
+  min-width: 0;
 }
 </style>
