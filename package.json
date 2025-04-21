@@ -14,6 +14,7 @@
     "format": "prettier --write src/"
   },
   "dependencies": {
+    "element-plus": "^2.9.8",
     "pinia": "^3.0.1",
     "swapy": "^1.0.5",
     "swiper": "^11.2.6",

@@ -1,44 +1,58 @@
 <template>
   <div class="uptags">
-    <input type="text" placeholder="空格分类" class="uptexts" />
-    <button type="submit" class="submit-tags">submit</button>
+    <el-input
+      v-model="tagInput"
+      placeholder="空格分类"
+      class="uptexts"
+      size="small"
+      :clearable="true"
+    />
+    <el-button
+      type="primary"
+      class="submit-tags"
+      @click="submitTag"
+      size="small"
+    >
+      Submit
+    </el-button>
   </div>
 </template>
 
-<script></script>
+<script setup>
+import { ref } from 'vue'
+
+const tagInput = ref('')
+
+const submitTag = () => {
+  if (tagInput.value.trim()) {
+    console.log('提交的标签:', tagInput.value)
+    // 在这里处理提交逻辑
+    tagInput.value = '' // 提交后清空输入框
+  } else {
+    console.log('请输入标签')
+  }
+}
+</script>
 
 <style scoped>
 .uptags {
-  display: flex; /* 横向并排布局 */
-  gap: 1vw; /* 输入框和按钮之间的间距 */
-  margin-top: 1vw; /* 上下留白 */
+  display: flex;
+  gap: 1vw;
+  margin-top: 1vw;
 }
 
 .uptexts {
-  flex: 1; /* 输入框自动扩展占据剩余空间 */
-  padding: 0.5em;
-  font-size: 1em;
-  border: 2px solid #ccc;
-  border-radius: 8px;
+  flex: 1;
   min-width: 0;
 }
 
 .submit-tags {
-  background-color: cornflowerblue;
-  margin-right: 1px;
-  color: white;
-  border: none;
-  padding: 0.5em 1em;
-  border-radius: 8px;
-  cursor: pointer;
-  font-size: 1em;
-  white-space: nowrap;
-  max-width: 100%; /* 限制最大宽度 */
-  box-sizing: border-box; /* 确保包括内边距和边框 */
+  padding:1.2rem 1.5rem;
+  min-width: 0;
+  box-sizing: border-box;
   font-family: 'Permanent Marker', cursive;
   font-weight: 400;
   font-style: normal;
-  flex-shrink: 1;
-  min-width: 0;
 }
 </style>
+

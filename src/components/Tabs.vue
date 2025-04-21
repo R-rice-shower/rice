@@ -1,14 +1,34 @@
 <template>
-  <div>
-    <Swiper slidesPerView="10" :spaceBetween="10" :freeMode="true" class="Navigation-container">
-      <SwiperSlide v-for="(item, index) in tags" :key="index">{{ item }}</SwiperSlide>
-    </Swiper>
+  <div class="navigation-wrapper">
+    <swiper
+      slides-per-view="12"
+      :space-between="10"
+      :free-mode="true"
+      class="navigation-container"
+    >
+      <swiper-slide
+        v-for="(item, index) in tags"
+        :key="index"
+        class="navigation-tag"
+      >
+        <el-tag
+          size="large"
+          type="info"
+          effect="light"
+        >
+          {{ item }}
+        </el-tag>
+      </swiper-slide>
+    </swiper>
   </div>
 </template>
+
 <script setup>
+import { ref } from 'vue'
 import { Swiper, SwiperSlide } from 'swiper/vue'
 import 'swiper/css'
-import { ref } from 'vue'
+import { ElTag } from 'element-plus'
+
 const tags = ref([
   '蔚蓝档案',
   '明日方舟',
@@ -28,20 +48,24 @@ const tags = ref([
   7,
 ])
 </script>
+
 <style scoped>
-.Navigation-container {
-  margin-left: 10vw;
+.navigation-wrapper {
   width: 80vw;
-  margin: 1vw;
-  margin-left: 8vw;
-  border-radius: 5px;
-  background-color: rgb(46, 30, 167);
+  margin: 1vw auto;
+  background-color: #2e1ea7;
+  padding: 10px;
+  border-radius: 8px;
+  overflow: hidden;
 }
 
-.swiper-slide {
-  margin: 0.2vw;
+.navigation-container {
+  width: 100%;
+}
 
-  background: #d6d5fc;
-  border-radius: 5px;
+.navigation-tag {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 </style>

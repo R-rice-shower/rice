@@ -5,7 +5,7 @@
       <Navigation />
       <Carousel />
 
-      <h1 class="title">Lrbrary</h1>
+      <h1 class="title">Library</h1>
     </div>
     <div class="select">
       <Upload />
@@ -17,11 +17,11 @@
 </template>
 
 <script setup>
-import Navigation from '../components/Navigation.vue'
-import Carousel from '../components/Carousel.vue'
-import Upload from '../components/Upload.vue'
-import Uptags from '../components/Uptags.vue'
-import Tabs from '../components/Tabs.vue'
+import Navigation from '@/components/Navigation.vue'
+import Carousel from '@/components/Carousel.vue'
+import Upload from '@/components/Upload.vue'
+import Uptags from '@/components/Uptags.vue'
+import Tabs from '@/components/Tabs.vue'
 import Exhibition from '@/components/Exhibition.vue'
 </script>
 
